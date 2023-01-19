@@ -5,9 +5,6 @@ html {
 body {
   height: 100%;
   max-width: 1024px;
-
-  border-left: 1px solid pink;
-  border-right: 1px solid pink;
 }
 
 canvas {
