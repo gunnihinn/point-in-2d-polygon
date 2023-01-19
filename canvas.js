@@ -88,24 +88,6 @@ function handleMode(event) {
                 ctx.stroke();
 
 		points.push(points[0]);
-
-		ns = normals(points);
-		for (i = 0; i < points.length - 1; i++) {
-			var px = points[i][0];
-			var py = points[i][1];
-			var nx = ns[i][0];
-			var ny = ns[i][1];
-			console.log(`point=(${px},${py}), normal=(${nx},${ny})`);
-			px = points[i][0] + (points[i+1][0] - points[i][0]) / 2;
-			py = points[i][1] + (points[i+1][1] - points[i][1]) / 2;
-			nx = nx / Math.sqrt(nx*nx + ny*ny) * 20;
-			ny = ny / Math.sqrt(nx*nx + ny*ny) * 20;
-			ctx.beginPath();
-			ctx.moveTo(px, py);
-			ctx.lineTo(px + nx, py + ny);
-			ctx.closePath();
-			ctx.stroke();
-		}
         }
 }
 
